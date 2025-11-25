@@ -10,7 +10,7 @@
     <body>
         <h1>Calculator</h1>
         <div id="calcBackground">
-            <input title="display" placeholder = "" id ="inputBox">
+            <input placeholder = "1+1" id ="inputBox">
             <table id="commands">
                 <tr>
                     <td><button type = "button" onclick="clear()" id="Clear">C</button></td>
@@ -38,7 +38,7 @@
                 </tr>
                 <tr>
                     <td><button type = "button" onclick="enter(0)" id="0">0</button></td>
-                    <td></td>
+                    <td><button type = "button" onclick="enter('.')" id=".">.</button></td>
                     <td></td>
                     <td><button type = "button" onclick="enter('add')" id="add">+</button></td>
                 </tr>
@@ -48,6 +48,7 @@
                     <td></td>
                     <td><button type="button" onclick="solve()" id="equals">=</button></td>
                 </tr>
+                <input type="file" id="fileToLoad">
             </table>
         
             

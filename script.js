@@ -1,11 +1,27 @@
 let expressions = [];
 const priority = ['^','*','/','+','-'];
 let current = "";
-let inputBox = document.getElementById("inputBox");
+let statement = true;
+document.addEventListener("DOMContentLoaded", function() {
+    let inputBox = document.getElementById("inputBox");
+});
+
+function clear() {
+    console.log("clearing");
+    inputBox.value = "";
+    expressions = [];
+}
 
 function enter(input) {
-    let expression = document.getElementById(input).innerHTML
-    inputBox.value+= expression;
+    let expression = document.getElementById(input).innerHTML;
+    if (!statement){
+        if(!priority.includes(expression)) {
+            inputBox.value = "";
+            expressions = [];
+        }
+    }
+    inputBox.value += expression;
+    statement = true;
     if(priority.includes(expression)) {
         expressions.push(current);
         expressions.push(expression);
@@ -18,8 +34,8 @@ function enter(input) {
 function solve(){
     expressions.push(current);
     console.log(expressions);
-    for(let i = 0; i < 4;i++) {
-        if(expressions.includes(priority.at(i))) {
+    for(let i = 0; i < priority.length;i++) {
+        while (expressions.includes(priority.at(i))) {
             console.log(i);
             let position = expressions.findIndex(pointer => pointer == priority.at(i));
             let before = position - 1;
@@ -51,5 +67,6 @@ function solve(){
             console.log(expressions);
         }
     }
-    inputBox = "";
+    inputBox.value = expressions;
+    statement = false;
 }

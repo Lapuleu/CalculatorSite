@@ -11,36 +11,42 @@
         <h1>Calculator</h1>
         <div id="calcBackground">
             <input title="display" placeholder = "" id ="inputBox">
-            <table>
+            <table id="commands">
                 <tr>
-                    <td><button type = "button" onclick="type(7)">7</button></td>
-                    <td><button type = "button" onclick="type(8)">8</button></td>
-                    <td><button type = "button" onclick="type(9)">9</button></td>
-                    <td><button type = "button" onclick="type(divide)">÷</button></td>
+                    <td><button type = "button" onclick="clear()" id="Clear">C</button></td>
+                    <td><button type = "button"></button></td>
+                    <td><button type = "button"></button></td>
+                    <td><button type = "button" onclick="round()" id="Round">R</button></td>
                 </tr>
                 <tr>
-                    <td><button type = "button" onclick="type(4)">4</button></td>
-                    <td><button type = "button" onclick="type(5)">5</button></td>
-                    <td><button type = "button" onclick="type(6)">6</button></td>
-                    <td><button type = "button" onclick="type(multiply)">*</button></td>
+                    <td><button type = "button" onclick="enter(7)" id="7">7</button></td>
+                    <td><button type = "button" onclick="enter(8)" id="8">8</button></td>
+                    <td><button type = "button" onclick="enter(9)" id="9">9</button></td>
+                    <td><button type = "button" onclick="enter('divide')" id="divide">/</button></td>
                 </tr>
                 <tr>
-                    <td><button type = "button" onclick="type(1)">1</button></td>
-                    <td><button type = "button" onclick="type(2)">2</button></td>
-                    <td><button type = "button" onclick="type(3)">3</button></td>
-                    <td><button type = "button" onclick="type(subtract)">-</button></td>
+                    <td><button type = "button" onclick="enter(4)" id="4">4</button></td>
+                    <td><button type = "button" onclick="enter(5)" id="5">5</button></td>
+                    <td><button type = "button" onclick="enter(6)" id="6">6</button></td>
+                    <td><button type = "button" onclick="enter('multiply')" id="multiply">*</button></td>
                 </tr>
                 <tr>
-                    <td><button type = "button" onclick="type(0)">0</button></td>
+                    <td><button type = "button" onclick="enter(1)" id="1">1</button></td>
+                    <td><button type = "button" onclick="enter(2)" id="2">2</button></td>
+                    <td><button type = "button" onclick="enter(3)" id="3">3</button></td>
+                    <td><button type = "button" onclick="enter('subtract')" id="subtract">-</button></td>
+                </tr>
+                <tr>
+                    <td><button type = "button" onclick="enter(0)" id="0">0</button></td>
                     <td></td>
                     <td></td>
-                    <td><button type = "button" onclick="type(add)">+</button></td>
+                    <td><button type = "button" onclick="enter('add')" id="add">+</button></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td><button type="button" onclick="type(equals)">=</button></td>
+                    <td><button type="button" onclick="solve()" id="equals">=</button></td>
                 </tr>
             </table>
         

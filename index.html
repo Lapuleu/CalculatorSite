@@ -5,17 +5,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Calculator</title>
         <link rel="stylesheet" type="text/css" href="style.css">
-        <script src="script.js"></script>
     </head>
     <body>
         <h1>Calculator</h1>
         <div id="calcBackground">
             <input placeholder = "1+1" id ="inputBox">
+            <input type="file" id="fileToLoad">
+            <p id ="Message"></p>
             <table id="commands">
+                 <tr>
+                    <td colspan="2"><button class="button" onclick="checkFileProperty()" style="font-size: 16px; width: 90px;">Load Selected</button></td>
+                    <td><button type = "button" onclick="stat('mean')" id="mean">Mn</button></td>
+                    <td><button type = "button" onclick="stat('median')" id="median">Md</button></td>
+                </tr>
                 <tr>
-                    <td><button type = "button" onclick="clear()" id="Clear">C</button></td>
-                    <td><button type = "button"></button></td>
-                    <td><button type = "button"></button></td>
+                    <td><button type = "button" onclick="clearInput()" id="Clear">C</button></td>
+                    <td><button type = "button" onclick="stat('mode')" id="mode">Mo</button></td>
+                    <td><button type = "button" onclick="enter('expo')" id="expo">^</button></td>
                     <td><button type = "button" onclick="round()" id="Round">R</button></td>
                 </tr>
                 <tr>
@@ -39,19 +45,14 @@
                 <tr>
                     <td><button type = "button" onclick="enter(0)" id="0">0</button></td>
                     <td><button type = "button" onclick="enter('.')" id=".">.</button></td>
-                    <td></td>
+                    <td><button type="button" onclick="solve()" id="equals">=</button></td>
                     <td><button type = "button" onclick="enter('add')" id="add">+</button></td>
                 </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td><button type="button" onclick="solve()" id="equals">=</button></td>
-                </tr>
-                <input type="file" id="fileToLoad">
             </table>
         
             
         </div>
+        <input placeholder="File Input" id="fileInput">
     </body>
+    <script src="script.js"></script>
 </html>

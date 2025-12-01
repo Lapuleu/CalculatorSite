@@ -9,6 +9,22 @@ body{
 h1 {
     justify-self: center;
     font-size: 50px;
+    letter-spacing: 4px;
+}
+button{
+    font-size: 25px;
+    border: solid 2px;
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+}
+button:hover{
+    background-color: rgb(215, 247, 255);
+}
+td{
+    text-align: center;
+    align-content: center;
 }
 #calcBackground {
     justify-self: center;
@@ -16,15 +32,9 @@ h1 {
     border-radius: 15px;
     border: solid 3px white;
     width: 300px;
-    height: 300px;
-}
-button{
-    font-size: 25px;
-    border: solid 2px;
-    border-radius: 5px;
-}
-button:hover{
-    background-color: rgb(215, 247, 255);
+    height: auto;
+    align-content: center;
+    align-items: center;
 }
 #commands{
     justify-self: center;
@@ -32,4 +42,22 @@ button:hover{
 }
 #inputBox {
     justify-self: center;
+    margin: 20px 10px 0px 20px;
+    width: 250px;
+}
+#fileToLoad {
+    margin-top: 5px;
+    justify-self: center;
+    display: flex;
+    font-size: 14px;
+}
+#fileInput{
+    font-size: 14px;
+    margin-top: 10px;
+    display: flex;
+    justify-self: center;
+}
+#mean, #median, #mode {
+    font-size: 18px;
+    text-align: center;
 }
